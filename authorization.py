@@ -2,8 +2,8 @@ from main import load_key
 from cryptography.fernet import Fernet
 import os
 
-key = load_key()
-f = Fernet(key)
+
+f = Fernet(load_key())
 
 def authorization(username_input, password_input, fernet_obj):
     if not os.path.exists('passwords.txt'):
